@@ -5,6 +5,7 @@ body {
   
 }
 
+
 h1 {
 
   font-style:italic;
@@ -20,10 +21,6 @@ td, th {
   padding: 5px; 
   border: 2px solid black ;
   background-color: white;
-
-}
-article{
-
 
 }
 

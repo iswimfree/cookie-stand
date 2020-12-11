@@ -21,7 +21,7 @@ function Salmoncookie(name, min, max, avg) {
 Salmoncookie.prototype.getRandomNumber = function () {
   return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
 };
-//lets do some mathy stuff 
+//lets do some mathy stuff
 Salmoncookie.prototype.moneyPerHour = function () {
   for (var i = 0; i < hours.length; i++) {
     var totalSales = Math.ceil(this.getRandomNumber() * this.avg);
@@ -35,10 +35,10 @@ Salmoncookie.prototype.renderTable = function () {
   var trElement = document.createElement('tr');//create tr
   cookieTable.appendChild(trElement); //add to table
   var thElement = document.createElement('th'); //create th
-  thElement.textContent = this.name; //this creates the name 
+  thElement.textContent = this.name; //this creates the name
   trElement.appendChild(thElement); // this adds name to table
   for (var i = 0; i < this.hourlySales.length; i++) {
-    var tdElement = document.createElement('td'); //creating more elements 
+    var tdElement = document.createElement('td'); //creating more elements
     tdElement.textContent = this.hourlySales[i];
     trElement.appendChild(tdElement); //adding more to table
   }
@@ -63,42 +63,7 @@ function renderHeader() {
   thElement.textContent = ('daily location total');
   trElement.appendChild(thElement);
 }
-var parentEl = document.getElementById('container');
-function handleClick(event) {
-  if (event.target.id === 'box-one') {
-    var pEl = document.createElement('p');
-    pEl.textContent = 'what kind of fish do you want';
-    parentEl.append(pEl);
-  }
-  if (event.target.id === 'box-two') {
-    var pEl = document.createElement('p');
-    pEl.textContent = 'clicked:  Box 2!';
-    parentEl.append(pEl);
-  }
-  if (event.target.id === 'box-three') {
-    var pEl = document.createElement('p');
-    pEl.textContent = 'Box 3 done got clicked!';
-    parentEl.appendChild(pEl);
-  }
-  if (event.target.id === 'container') {
-    var pEl = document.createElement('p');
-    pEl.textContent = 'FOLLOW INSTRUCTIONS!!!';
-    parentEl.appendChild(pEl);
-  }
-}
-var myForm = document.getElementById('container-two');
-function handleSubmit(event) {
-  event.preventDefault();
 
-  var cookie = event.target.cookie.value;
-  console.log(cookie);
-
-  var fish = event.target.fish.value;
-  console.log(fish);
-
-  var word = event.target.word.value;
-  console.log(word);
-}
 
 new Salmoncookie('Seattle', 23, 65, 6.3);
 new Salmoncookie('Tokyo', 3, 24, 1.2);
@@ -115,4 +80,4 @@ function renderAll() {
 }
 renderHeader();
 renderAll();
-myForm.addEventListener('submit', handleSubmit, handleClick);
+
