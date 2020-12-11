@@ -10,8 +10,11 @@ salmon cookie repo;
 
 
 ## collab
-
-
+- glenn 
+- ryan
+- dar-ci
+- clement 
+- 
 ## error or issues
 
 - used [git flow](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) to help with adding new branch.

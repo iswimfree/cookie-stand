@@ -8,32 +8,59 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Salmon Cookies</title>
-  
+
 </head>
 
 <body>
   <header>
     <h1>Salmon Cookies</h1>
-  <img src="img/salmon.png" alt="">
-  <br>
+    <img src="img/salmon.png" alt="">
+    <br>
     <a href="sales.html">Sales</a>
     <hr>
+
   </header>
   <main>
+    <section id="container">
+      <h3>Build your own Cookie</h3>
+      <article id="box-one">Cookie Type</article>
+      <article id="box-two">Salmon Type</article>
+      <article id="box-three">Cookie Frosting Type</article>
+    </section>
+    <form id="container-two">
+      <fieldset>
+        <legend> Cookie Information</legend>
+
+        <label for="Cookie">Cookie Type</label>
+        <input type="text" name="Cookie type">
+
+        <label for="fish">Select fish</label>
+        <select name="eat">
+          <option value="salmon">Salmon</option>
+          <option value="Cod">Cod</option>
+          <option value="ruffy">Ruffy</option>
+          <option value="goldfish">Goldfish</option>
+        </select>
+
+        <label>Cookie Frosting Type:
+          <input type="text" name="word">
+        </label>
+
+        <button type="submit">Send</button>
+      </fieldset>
+    </form>
+
+    <br>
+    <h4>Delivery area</h4>
     <ul>
+
       <li>Seattle</li>
       <li>Tokyo</li>
       <li>Dubai</li>
       <li>Paris</li>
       <li>Lima</li>
-
-
-
     </ul>
   </main>
-
-
-
   <footer></footer>
 
 </body>
