@@ -10,7 +10,7 @@ h1 {
 }
 
 ul {
-  border: black;
+  border: 1px solid black;
   text-align: center;
   font-size: 30px;
   display: flex;
