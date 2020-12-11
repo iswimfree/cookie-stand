@@ -1,0 +1,46 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 100px;
+  text-align: center;
+}
+
+ul {
+  border: black;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  margin-top: 30px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: white;
+  padding: 200px;
+  color: black;
+  margin-top: 20px;
+}
+
+a:hover {
+  color: orange;
+}
+
+nav {
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.logo img {
+  margin-top: 15px;
+}

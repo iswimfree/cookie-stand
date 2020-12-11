@@ -2,7 +2,7 @@
 
 console.log('helllo world');
 
-var hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1Pm', '2Pm', '3Pm', '4PM', '5PM', '6Pm', '7PM'];
+var hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM'];
 var storeLocation = [];
 
 var cookieTable = document.getElementById('cookie table');
@@ -21,7 +21,7 @@ function Salmoncookie(name, min, max, avg) {
 Salmoncookie.prototype.getRandomNumber = function () {
   return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
 };
-//lets do some mathy stuff 
+//lets do some mathy stuff
 Salmoncookie.prototype.moneyPerHour = function () {
   for (var i = 0; i < hours.length; i++) {
     var totalSales = Math.ceil(this.getRandomNumber() * this.avg);
@@ -35,10 +35,10 @@ Salmoncookie.prototype.renderTable = function () {
   var trElement = document.createElement('tr');//create tr
   cookieTable.appendChild(trElement); //add to table
   var thElement = document.createElement('th'); //create th
-  thElement.textContent = this.name; //this creates the name 
+  thElement.textContent = this.name; //this creates the name
   trElement.appendChild(thElement); // this adds name to table
   for (var i = 0; i < this.hourlySales.length; i++) {
-    var tdElement = document.createElement('td'); //creating more elements 
+    var tdElement = document.createElement('td'); //creating more elements
     tdElement.textContent = this.hourlySales[i];
     trElement.appendChild(tdElement); //adding more to table
   }
@@ -65,7 +65,6 @@ function renderHeader() {
 }
 
 
-
 new Salmoncookie('Seattle', 23, 65, 6.3);
 new Salmoncookie('Tokyo', 3, 24, 1.2);
 new Salmoncookie('Dubai', 11, 38, 3.7);
@@ -80,4 +79,5 @@ function renderAll() {
   }
 }
 renderHeader();
-renderAll();}
+renderAll();
+
