@@ -13,4 +13,11 @@ h1 {
    
 }
 
+table {
+  border:1px solid black ;
+}
 
+td, th {
+  padding: 5px; 
+  border: 1px solid black ;
+}

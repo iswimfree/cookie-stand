@@ -30,7 +30,7 @@ Salmoncookie.prototype.moneyPerHour = function () {
     this.dailySales += totalSales;
   }
 };
-//at this point im just trying anything but i can do it !! just believe!
+//anything but i can do it !! just believe!
 Salmoncookie.prototype.renderTable = function () {
   this.moneyPerHour();
   var trElement = document.createElement('tr');//create tr
@@ -38,37 +38,46 @@ Salmoncookie.prototype.renderTable = function () {
   var thElement = document.createElement('th'); //create th
   thElement.textContent = this.name; //this creates the name 
   trElement.appendChild(thElement); // this adds name to table
-  for (var i = 0; i < this.hourlySales.length; i++);//this is creating a for loop to create the hourly sales array  i think {
-  var tdElement = document.createElement('td'); //creating more elements 
-  tdElement.textContent = this.hourlySales[i];
-  trElement.appendChild(tdElement); //adding more to table
+  for (var i = 0; i < this.hourlySales.length; i++) {
+    var tdElement = document.createElement('td'); //creating more elements 
+    tdElement.textContent = this.hourlySales[i];
+    trElement.appendChild(tdElement); //adding more to table
+  }
+  tdElement = document.createElement('td'); //this is for daily sales
+  tdElement.textContent = this.dailySales;
+  trElement.appendChild(tdElement);//adding to table
+};
+//create table head maybe this should be moved up honestly.
+function renderHeader() {
+  var tHead = document.createElement('thead');
+  cookieTable.appendChild(tHead);
+  var trElement = document.createElement('tr');
+  tHead.appendChild(trElement);
+  var tdElement = document.createElement('td');
+  trElement.appendChild(tdElement);
+  for (var i = 0; i < hours.length; i++) {
+    var thElement = document.createElement('th');
+    thElement.textContent = hours[i];
+    trElement.appendChild(thElement);
+  }
+  thElement = document.createElement('th');
+  thElement.textContent = ('daily location total');
+  trElement.appendChild(thElement);
 }
-tdElement = document.createElement('td'); //this is for daily sales
-tdElement.textContent = this.dailySales;
-trElement.appendChild(tdElement);//adding to table
-{
-  //create table head maybe this should be moved up honestly.
-  function renderHeader() {
-    var tHead = document.createElement('thead');
-    cookieTable.appendChild(tHead);
-    var trElement = document.createElement('tr');
-    tHead.appendChild(trElement);
-  }
 
-  new Salmoncookie('Seattle', 23, 65, 6.3);
-  new Salmoncookie('Tokyo', 3, 24, 1.2);
-  new Salmoncookie('Dubai', 11, 38, 3.7);
-  new Salmoncookie('Paris', 20, 38, 2.3);
-  new Salmoncookie('Lima', 2, 16, 4.6);
 
-  function renderAll() {
-    for (var i = 0; i < storeLocation; i++) {
-      storeLocation[i].render();
-      storeLocation[i].renderTable();
+new Salmoncookie('Seattle', 23, 65, 6.3);
+new Salmoncookie('Tokyo', 3, 24, 1.2);
+new Salmoncookie('Dubai', 11, 38, 3.7);
+new Salmoncookie('Paris', 20, 38, 2.3);
+new Salmoncookie('Lima', 2, 16, 4.6);
 
-    }
+function renderAll() {
+  for (var i = 0; i < storeLocation.length; i++) {
+    // storeLocation[i].render();
+    storeLocation[i].renderTable();
 
   }
-
+}
+renderHeader();
 renderAll();
-
